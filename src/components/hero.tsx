@@ -6,7 +6,7 @@ interface SearchSectionProps {}
 const SearchSection: React.FC<SearchSectionProps> = () => {
   return (
     <section className="flex overflow-hidden flex-col items-center bg-indigo-50 z-[-1]">
-      <div className="flex z-0 flex-col justify-center max-w-full rounded-xl min-h-[246px] shadow-[1px_2px_1px_rgba(0,0,0,0.25)] w-[1200px]">
+      <div className="flex flex-col justify-center max-w-full rounded-xl min-h-[246px] shadow-[1px_2px_1px_rgba(0,0,0,0.25)] w-[1200px]">
         <div className="flex flex-col justify-center px-5 w-full rounded-xl bg-blue-950 bg-opacity-30 min-h-[246px] max-md:max-w-full">
           <div className="flex flex-col justify-center py-2.5 w-full text-white max-md:max-w-full">
             <h1 className="text-4xl font-bold uppercase max-md:max-w-full">

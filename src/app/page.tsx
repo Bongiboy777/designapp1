@@ -12,10 +12,10 @@ const PropertyPulse: React.FC<PropertyPulseProps> = () => {
     <div className="flex flex-col min-h-screen items-center bg-indigo-50">
       <Header />
       <main className="w-full px-4 sm:px-6 lg:px-8">
-      <SearchSection />
-      <UserTypeSection />
-      <PropertySection title="Featured Properties" />
-      <PropertySection title="Recent Properties" />
+        <SearchSection />
+        <UserTypeSection />
+        <PropertySection title="Featured Properties" />
+        <PropertySection title="Recent Properties" />
       </main>
       <Footer />
     </div>
