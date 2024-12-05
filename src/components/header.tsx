@@ -21,18 +21,18 @@ const Header = () => {
 
 
   return (
-    <header className="flex z-0 flex-col items-center px-16 mb-10 w-full text-lg bg-white border-b-2 border-zinc-200 text-zinc-800 max-md:px-5 max-md:max-w-full">
-      <div className="flex flex-nowrap gap-5 justify-between items-center max-w-full w-[1196px]">
+    <header id='header' className="flex z-0 flex-col items-center px-16 mb-10 w-full text-lg bg-white border-b-2 border-zinc-200 text-zinc-800 max-md:px-5 max-md:max-w-full">
+      <div id='header-content' className="flex flex-nowrap gap-5 justify-between items-center max-w-full w-[1196px]">
 
-    <div id="mobile-menu">
-        <div className="flex lg:hidden items-center w-fit bg-blue">
+    <div id="mobile-menu " className='lg:hidden'>
+        <div className="flex  items-center w-fit bg-blue">
                 <button className="" type="button" title="mobile-menu" onClick={() => setShowMenu(!showMenu)}>
                 <MdOutlineMenu className="w-[24px] my-auto" />
                 </button>
             </div>
             <div className={`fixed flex flex-col items-center justify-center top-0 left-0 h-full bg-slate-800 bg-opacity-50 transition-all duration-500 ease-in-out ${showMenu ? 'w-full' : 'w-0'} }`}  onClick={() => setShowMenu(!showMenu)} >
                 {showMenu && (
-                    <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center self-stretch p-2.5 my-auto relative">
+                    <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center self-stretch p-2.5 my-auto">
                     <div className="top-0 left-0 w-fit h-full z-40" />
                     <div className=" absolute top-0 left-0 block p-2.5 z-5 ">
                         <button className="self-stretch my-auto top-0 right-0 z-50 w-full" type="button" title="close-menu" onClick={() => setShowMenu(!showMenu)}>
@@ -95,7 +95,7 @@ const Header = () => {
             <BiDoorOpen className={`self-stretch my-auto cursor-pointer ${showUserMenu ? 'text-amber-300' : ''} hover:text-amber-300 transition-all duration-300 ease-in-out`} size={32} onClick={() => {setShowNotificationMenu(false); return setShowUserMenu(!showUserMenu); }}/>
             {
             showUserMenu && (
-              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800 border-0 shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
+              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800  shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
                 <ul className="py-1">
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Register</li>
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Log in</li>
@@ -117,7 +117,7 @@ const Header = () => {
           />
           {
             showNotificationMenu &&  (
-              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800 border-0 shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
+              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800 shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
                 <ul className="py-1">
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Test Notification 1</li>
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Test Notification 2</li>
@@ -134,7 +134,7 @@ const Header = () => {
           />
           {
             showUserMenu && (
-              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800 border-0 shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
+              <div className="absolute right-0 top-10  w-fit text-sm text-zinc-800  shadow-sm border border-zinc-300 rounded-md p-5 bg-white">
                 <ul className="py-1">
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Test User Option 1</li>
                   <li className="px-4 py-2 hover:bg-zinc-100 cursor-pointer whitespace-nowrap">Test User Option 2</li>

@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased ${montserrat.className} text-gray-900`}
+        className={`absolute h-[100vh] w-full antialiased ${montserrat.className} text-gray-900`}
       >
         {children}
       </body>

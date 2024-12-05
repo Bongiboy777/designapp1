@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/components/header';
 import SearchSection from '@/components/hero';
 import UserTypeSection from '@/components/LandingPageCta';
-import PropertySection from '@/components/Gallery';
+import PropertySection from '@/components/PropertySection';
 import Footer from '@/components/footer';
 
 interface PropertyPulseProps {}
