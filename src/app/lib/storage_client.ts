@@ -1,25 +1,34 @@
 import { env } from "process";
 import mongoose, { mongo } from "mongoose";
 
-
 let connected = false;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 
 
-const connect = async (): Promise<mongoose.Connection> => {
+export const connect = async (): Promise<mongoose.Connection> => {
     mongoose.set('strictQuery', true);
+    
     if (connected) {
         console.log("Already connected to MongoDB");
-
+        if(mongoose.connection.name !== 'Properties'){
+        }
         return mongoose.connection;
     }
 
     try{
         console.log("Connecting to MongoDB usng URI: ", env.MONGODB_URI);
-        await mongoose.connect(env.MONGODB_URI!);
-
+        const mongooseObject = await mongoose.connect(env.MONGODB_URI!);
+        await mongoose.connection.useDb('Properties');
+        
+        if (!mongooseObject) {
+            throw new Error("Failed to connect to MongoDB");
+        }
         connected = true;
         console.log("Connected to MongoDB");
+        const connections = await mongoose.connection.listCollections();
+        console.log("Collections: ", connections);
+
+        console.log("Database Name: ", mongoose.connection.name);
         return mongoose.connection;
 
     }
@@ -31,7 +40,7 @@ const connect = async (): Promise<mongoose.Connection> => {
 
 }
 
-export default connect;
+
 
 // export const addProperty = async (property: any) => {
 //   const db = mongoose.db("property");

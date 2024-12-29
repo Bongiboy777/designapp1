@@ -11,10 +11,8 @@
       "state": "MA",
       "zipcode": "02108"
     },
-    "rooms": {
-      "beds": 2,
-      "baths": 1
-    },
+    "beds": 2,
+    "baths": 1,
     "square_feet": 1500,
     "amenities": [
       "Wifi",
@@ -41,7 +39,7 @@
       "email": "john@gmail.com",
       "phone": "617-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["a1.jpg", "a2.jpg", "a3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-01T00:00:00.000Z",
     "updatedAt": "2024-01-01T00:00:00.000Z"
@@ -58,10 +56,8 @@
       "state": "NY",
       "zipcode": "10001"
     },
-    "rooms": {
-      "beds": 1,
-      "baths": 1
-    },
+    "beds": 1,
+    "baths": 1,
     "square_feet": 1800,
     "amenities": [
       "Wifi",
@@ -87,7 +83,7 @@
       "email": "jane@gmail.com",
       "phone": "212-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["b1.jpg", "b2.jpg", "b3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-02T00:00:00.000Z",
     "updatedAt": "2024-01-02T00:00:00.000Z"
@@ -104,10 +100,8 @@
       "state": "CA",
       "zipcode": "90001"
     },
-    "rooms": {
-      "beds": 3,
-      "baths": 2
-    },
+    "beds": 3,
+    "baths": 2,
     "square_feet": 2200,
     "amenities": [
       "Wifi",
@@ -135,7 +129,7 @@
       "email": "david@gmail.com",
       "phone": "213-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["c1.jpg", "c2.jpg", "c3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-03T00:00:00.000Z",
     "updatedAt": "2024-01-03T00:00:00.000Z"
@@ -152,13 +146,8 @@
       "state": "TX",
       "zipcode": "78701"
     },
-    "rooms": {
-      "beds": 1,
-      "baths": 1
-    },
-
-  
-
+    "beds": 1,
+    "baths": 1,
     "square_feet": 900,
     "amenities": [
       "Fireplace",
@@ -174,7 +163,7 @@
       "email": "emily@gmail.com",
       "phone": "512-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["d1.jpg", "d2.jpg", "d3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-04T00:00:00.000Z",
     "updatedAt": "2024-01-04T00:00:00.000Z"
@@ -191,10 +180,8 @@
       "state": "IL",
       "zipcode": "60601"
     },
-    "rooms": {
-      "beds": 1,
-      "baths": 1
-    },
+    "beds": 1,
+    "baths": 1,
     "square_feet": 900,
     "amenities": [
       "High-Speed Internet",
@@ -212,7 +199,7 @@
       "email": "michael@gmail.com",
       "phone": "312-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["e1.jpg", "e2.jpg", "e3.jpg"],
     "is_featured": true,
     "createdAt": "2024-01-05T00:00:00.000Z",
     "updatedAt": "2024-01-05T00:00:00.000Z"
@@ -229,10 +216,8 @@
       "state": "FL",
       "zipcode": "33101"
     },
-    "rooms": {
-      "beds": 4,
-      "baths": 3
-    },
+    "beds": 4,
+    "baths": 3,
     "square_feet": 2800,
     "amenities": [
       "Beach Access",
@@ -250,7 +235,7 @@
       "email": "sarah@gmail.com",
       "phone": "305-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["f1.jpg", "f2.jpg", "f3.jpg"],
     "is_featured": true,
     "createdAt": "2024-01-06T00:00:00.000Z",
     "updatedAt": "2024-01-06T00:00:00.000Z"
@@ -267,10 +252,8 @@
       "state": "CO",
       "zipcode": "80201"
     },
-    "rooms": {
-      "beds": 2,
-      "baths": 1
-    },
+    "beds": 2,
+    "baths": 1,
     "square_feet": 1100,
     "amenities": [
       "Fireplace",
@@ -287,7 +270,7 @@
       "email": "robert@gmail.com",
       "phone": "303-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["g1.jpg", "g2.jpg", "g3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-07T00:00:00.000Z",
     "updatedAt": "2024-01-07T00:00:00.000Z"
@@ -304,10 +287,8 @@
       "state": "CO",
       "zipcode": "81611"
     },
-    "rooms": {
-      "beds": 3,
-      "baths": 2
-    },
+    "beds": 3,
+    "baths": 2,
     "square_feet": 1800,
     "amenities": [
       "Ski Equipment Storage",
@@ -324,7 +305,7 @@
       "email": "jennifer@gmail.com",
       "phone": "970-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["h1.jpg", "h2.jpg", "h3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-08T00:00:00.000Z",
     "updatedAt": "2024-01-08T00:00:00.000Z"
@@ -341,10 +322,8 @@
       "state": "CO",
       "zipcode": "80301"
     },
-    "rooms": {
-      "beds": 4,
-      "baths": 3
-    },
+    "beds": 4,
+    "baths": 3,
     "square_feet": 2400,
     "amenities": [
       "Mountain View",
@@ -362,7 +341,7 @@
       "email": "lisa@gmail.com",
       "phone": "303-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["i1.jpg", "i2.jpg", "i3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-09T00:00:00.000Z",
     "updatedAt": "2024-01-09T00:00:00.000Z"
@@ -379,10 +358,8 @@
       "state": "PA",
       "zipcode": "19101"
     },
-    "rooms": {
-      "beds": 2,
-      "baths": 1
-    },
+    "beds": 2,
+    "baths": 1,
     "square_feet": 1200,
     "amenities": [
       "High-Speed Internet",
@@ -399,7 +376,7 @@
       "email": "matthew@gmail.com",
       "phone": "215-555-5555"
     },
-    "images":["https://images.unsplash.com/photo-1501635238895-63f29cfc06b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1465301055284-72f355cfd745?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1661963657305-f52dcaeef418?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+    "images": ["j1.jpg", "j2.jpg", "j3.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-10T00:00:00.000Z",
     "updatedAt": "2024-01-10T00:00:00.000Z"

@@ -4,7 +4,7 @@ import React from 'react'
 
 const Layout: React.FC = ({ children }) => {
     return (
-        <div className={`antialiased h-full flex-col w-full`}>
+        <div className={`antialiased h-full flex-col w-full bg-white`}>
             <Header />
             {children}
             <Footer/>

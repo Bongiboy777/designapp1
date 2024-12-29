@@ -1,8 +1,7 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
-import logo from '@/assets/images/logo.png'
-import { MdOutlineMenu, MdOutlineOtherHouses, MdClose } from 'react-icons/md'
+import { MdOutlineMenu, MdClose } from 'react-icons/md'
 import { FaBell } from 'react-icons/fa'
 import { AiOutlineUser } from 'react-icons/ai'
 
@@ -10,18 +9,16 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import NavLink from './NavLink'
 import { BiDoorOpen } from 'react-icons/bi'
-import Button from './Button/Button'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [showUserMenu, setShowUserMenu] = useState(false)
   const [showNotificationMenu, setShowNotificationMenu] = useState(false)
-  const pathName = usePathname();
   const [loggedIn, setLoggedIn] = useState(false);
 
 
   return (
-    <header id='header' className="flex z-0 flex-col items-center px-16 mb-10 w-full text-lg bg-white border-b-2 border-zinc-200 text-zinc-800 max-md:px-5 max-md:max-w-full">
+    <header id='header' className="flex z-0 flex-col items-center px-16 w-full text-lg bg-white border-b-2 border-zinc-200 text-zinc-800 max-md:px-5 max-md:max-w-full">
       <div id='header-content' className="flex flex-nowrap gap-5 justify-between items-center max-w-full w-[1196px]">
 
     <div id="mobile-menu " className='lg:hidden'>
@@ -55,7 +52,7 @@ const Header = () => {
 
         <div className="flex justify-center gap-8 items-center font-semibold whitespace-nowrap w-fit">
           <div className="flex overflow-hidden gap-2.5 items-center self-stretch py-2 my-auto justify-center w-fit">
-            <Image src={logo} width={48} height={48} alt="PropertyPulse logo" className="object-contain shrink-0 self-center my-auto aspect-square w-[42px]" />
+            <Image src={'/images/logo.png'} width={48} height={48} alt="PropertyPulse logo" className="object-contain shrink-0 self-center my-auto aspect-square w-[42px]" />
             <Link href="/" className="self-stretch my-auto hidden lg:block">
               PropertyPulse
             </Link>

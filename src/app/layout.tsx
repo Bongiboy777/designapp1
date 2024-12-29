@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {Poppins, Montserrat, Playfair} from 'next/font/google'
-import "./globals.css";
+import "@/app/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`absolute h-[100vh] w-full antialiased ${montserrat.className} text-gray-900`}
+        className={`absolute h-[100vh] w-full antialiased ${playfair.className} text-gray-900`}
       >
         {children}
       </body>
