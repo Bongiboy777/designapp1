@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Button from "./Button/Button";
 
-export const Infobox = ({heading, subheading, buttonColor,buttonLabel}) => {
+export const Infobox = ({heading, subheading, buttonColor,buttonLabel, href}) => {
     return (
         <div className={
           "flex flex-col flex-1 shrink justify-center px-12 py-5 bg-white rounded-xl basis-0 min-w-[240px]" +
@@ -23,7 +23,7 @@ export const Infobox = ({heading, subheading, buttonColor,buttonLabel}) => {
           <Button className={
             buttonColor
           }>
-            <Link href="/search" >
+            <Link href={href!} >
               {buttonLabel}
             </Link>
           </Button>

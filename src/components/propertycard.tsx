@@ -5,13 +5,13 @@ import Image from "next/image";
 import { FaBed, FaMapMarked, FaRuler, FaShower, FaSwimmingPool } from "react-icons/fa";
 import { GiCarWheel, GiGardeningShears } from "react-icons/gi";
 import { useRouter } from "next/navigation";
-import {  ExtendedProperty } from "@/app/models/property";
+import {  ExtendedProperty, propertyInterface } from "@/app/models/property";
 
 
-const PropertyCard: React.FC<ExtendedProperty> = ({property}) => {
-  // console.log(Object.keys(property));
-  // console.log(property._id);
-  // console.log(property.images[0])
+const PropertyCard: React.FC<propertyInterface> = (property) => {
+  // // console.log(Object.keys(property));
+  // // console.log(property._id);
+  // // console.log(property.images[0])
   if (!property) {
     console.error("Property is undefined");
     throw new Error("Property is undefined", property);

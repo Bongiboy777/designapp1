@@ -3,18 +3,18 @@ import { Property } from "@/app/models/property";
 import { ObjectId } from 'mongodb';
 
 export const GET = async (request: Request) => {
-    console.log("Get request")
+    // // console.log("Get request")
     try {
         await connect();
         if(request.url.includes("id=")){
             const id = request.url.split("id=")[1];
-            console.log(`Server calling for property with id: ${id}`);
+            // console.log(`Server calling for property with id: ${id}`);
             
             const property = await Property.findById(new ObjectId(id));
             return new Response(JSON.stringify(property), {status: 200});
         }
         else{
-            console.log("Server calling for all properties");
+            // console.log("Server calling for all properties");
             const properties = await Property.find();
             return new Response(JSON.stringify(properties), {status: 200});
         }

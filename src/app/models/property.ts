@@ -55,6 +55,7 @@ export interface propertyInterface {
     rates: {
       weekly: number;
       monthly: number;
+      nightly: number;
     };
     seller_info: {
       name: string;
