@@ -153,7 +153,7 @@ const Header = () => {
                   className="cursor-pointer  p-0"
                   src={session.user!.image!}
                   alt={'Account'}
-                  objectFit='cover'
+                
                   
                   height={64}
                   width={64}

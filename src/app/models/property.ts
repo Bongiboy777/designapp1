@@ -12,10 +12,8 @@ export const propertySchema = new Schema({
         state: { type: String, required: false },
         zipcode: { type: String, required: true }
     },
-    rooms: {
-        beds: { type: Number, required: true },
-        baths: { type: Number, required: true }
-    },
+    beds: { type: Number, required: true },
+      baths: { type: Number, required: true },
     square_feet: { type: Number, required: true },
     amenities: [{ type: String }],
     rates: {

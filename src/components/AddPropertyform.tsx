@@ -1,6 +1,9 @@
 'use client'
-import React, { ChangeEvent } from 'react'
+import React, { ChangeEvent, useState } from 'react'
+import Image from 'next/image'
 import { propertyInterface } from '@/app/models/property';
+import ImageWithRemoveButton from './ImageWithRemoveButton';
+import { FaTimes } from 'react-icons/fa';
 
 const AddPropertyform = () => {
   const [property, setProperty] = React.useState<Omit<propertyInterface, 
@@ -31,6 +34,9 @@ const AddPropertyform = () => {
       phone: '',
     },
   });
+  const [selectedImages, setSelectedImages] = useState<string[]>([]);
+  const [showLargeImage, setShowLargeImage] = useState<string | null>(null);
+
   const handleChange = async (changeEvent: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLTextAreaElement>) => {
     console.log(typeof(changeEvent));
     console.log(changeEvent.target.value);
@@ -80,30 +86,56 @@ const AddPropertyform = () => {
     }
 
 
-    const handleImagesChange = async (changeEvent: ChangeEvent<HTMLInputElement>) => {
-      console.log(changeEvent.target.name);
-      const images = new Set<string>(property.images);
-      const files = changeEvent.currentTarget.files!
-      for (let i = 0; i<files.length; i++){
-        images.add(files[i].name)
-      }
-      images.forEach(i => console.log(i))
-      await setProperty((prev) => ({
-        ...prev,
-        images: [...images]
-      }))
-      
+    const handleImagesChange = (event: ChangeEvent<HTMLInputElement>) => {
+      if (event.target.files) {
+        event.preventDefault();
+        console.log("Event prevented");
 
-    }
+        const filesArray = Array.from(event.target.files);
+        console.log("Files array created:", filesArray);
+
+        const uniqueValues = [...new Set(filesArray.map(file => file.name).concat(selectedImages))];
+        console.log("Unique values created:", uniqueValues);
+
+        const filteredFiles = filesArray.filter(f => uniqueValues.includes(f.name));
+        console.log("Filtered files:", filteredFiles);
+
+        const imageUrls = filteredFiles.map((file, index) => URL.createObjectURL(file));
+        console.log("Image URLs created:", imageUrls);
+
+        setProperty((prev) => ({...prev, images: imageUrls}));
+        console.log("Property images updated");
+
+        setSelectedImages((prev) => uniqueValues);
+        console.log("Selected images updated");
+
+        // filesArray.forEach((file) => URL.revokeObjectURL(file));
+        // console.log("Object URLs revoked");
+      }
+    };
+
+    const handleRemoveImage = (index: number) => {
+      const imagesList = property.images.filter((_, i) => i !== index)
+      setProperty((prev) => ({...prev, images: imagesList}));
+      setSelectedImages((prevImages) => prevImages.filter((_, i) => i !== index));
+    };
+
+    const handleImageClick = (src: string) => {
+      setShowLargeImage(src);
+    };
+  
+    const handleCloseLargeImage = () => {
+      setShowLargeImage(null);
+    };
 
     const handleSubmit = async () => {
-
+      console.log("caller: handle submit: \nsubmitting form");
     }
 
 
   return (
    
-            <form onSubmit={handleSubmit}>
+            <form method='POST' action={'/api/properties' } className="space-y-4" onSubmit={handleSubmit}>
             <h2 className="text-3xl text-center font-semibold mb-6">
               Add Property
             </h2>
@@ -496,7 +528,7 @@ const AddPropertyform = () => {
               <input
                 type="text"
                 id="seller_name"
-                name="seller_info.name."
+                name="seller_info.name"
                 className="border rounded w-full py-2 px-3"
                 placeholder="Name"
                 value={property.seller_info.name}
@@ -548,9 +580,55 @@ const AddPropertyform = () => {
                 className="border rounded w-full py-2 px-3"
                 accept="image/*"
                 onChange={handleImagesChange}
+
                 multiple
               />
+
+      <div className="mb-4">
+              <label className="block text-gray-700 font-bold mb-2">Selected Images</label>
+              <div className="grid grid-cols-2 gap-2">
+                {property.images.map((image, index) => (
+                  <ImageWithRemoveButton
+                    key={index}
+                    src={image}
+                    alt={`Selected ${index}`}
+                    onRemove={() => handleRemoveImage(index)}
+                    onClick={() => handleImageClick(image)}
+                  />
+                ))}
+              </div>
             </div>
+            </div>
+
+            {showLargeImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative">
+            <Image width={1920} height={1200} src={showLargeImage} alt="Large view" className="w-auto h-auto max-w-full max-h-full transition ease-in" />
+            <button
+              title='close'
+              onClick={handleCloseLargeImage}
+              className="absolute top-2 right-2 bg-gray-500 bg-opacity-50 text-white rounded-full p-1"
+            >
+              <FaTimes />
+            </button>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50">
+            <div className="flex overflow-x-auto space-x-2">
+              {property.images.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  alt={`Thumbnail ${index}`}
+                  width={800}
+                  height={600}
+                  className="w-20 h-20 object-cover cursor-pointer"
+                  onClick={() => handleImageClick(image)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
             <div>
               <button
